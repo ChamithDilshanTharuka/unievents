@@ -5,21 +5,21 @@ const TopSection = () => {
 <main className="main">
         <section id="hero" className="hero section">
 
-      <img src="assets/img/hero-bg-abstract.jpg" alt="" data-aos="fade-in" className=""/>
+      <img src="assets/img/hero-bg-abstract.jpg" alt=""  className=""/>
 
       <div className="container">
-        <div className="row justify-content-center" data-aos="zoom-out">
+        <div className="row justify-content-center" >
           <div className="col-xl-7 col-lg-9 text-center">
             <h1>UniEvents</h1>
             <p>We are team of talented designers making websites with Bootstrap</p>
           </div>
         </div>
-        <div className="text-center" data-aos="zoom-out" data-aos-delay="100">
+        <div className="text-center" >
           <a href="#about" className="btn-get-started">Get Started</a>
         </div>
 
         <div className="row gy-4 mt-5">
-          <div className="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="100">
+          <div className="col-md-6 col-lg-3" >
             <div className="icon-box">
               <div className="icon"><i className="bi bi-easel"></i></div>
               <h4 className="title"><a href="">Lorem Ipsum</a></h4>
@@ -27,7 +27,7 @@ const TopSection = () => {
             </div>
           </div>
 
-          <div className="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="200">
+          <div className="col-md-6 col-lg-3" >
             <div className="icon-box">
               <div className="icon"><i className="bi bi-gem"></i></div>
               <h4 className="title"><a href="">Sed ut perspiciatis</a></h4>
@@ -35,14 +35,14 @@ const TopSection = () => {
             </div>
           </div>
 
-          <div className="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="300">
+          <div className="col-md-6 col-lg-3" >
             <div className="icon-box">
               <div className="icon"><i className="bi bi-geo-alt"></i></div>
               <h4 className="title"><a href="">Magni Dolores</a></h4>
               <p className="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
             </div>
           </div>
-          <div className="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="400">
+          <div className="col-md-6 col-lg-3" >
             <div className="icon-box">
               <div className="icon"><i className="bi bi-command"></i></div>
               <h4 className="title"><a href="">Nemo Enim</a></h4>
