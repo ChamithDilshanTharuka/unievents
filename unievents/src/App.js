@@ -6,6 +6,10 @@ import Footer from './components/Footer';
 import TopSection from './components/TopSection'
 import Events  from './components/Events';
 import Stats from './components/Stats';
+import JoinUs from './components/JoinUs';
+import Gallery from './components/Gallery';
+import Faq from './components/Faq';
+import AboutUs from './AboutUs';
 
 
 
@@ -15,8 +19,12 @@ function App() {
     <div className="App">
       <Header/>
       <TopSection/>
+      <AboutUs/>
       <Events/>
       <Stats/>
+      <JoinUs/>
+      <Gallery/>
+      <Faq/>
       <Footer/>
     </div>
   );
