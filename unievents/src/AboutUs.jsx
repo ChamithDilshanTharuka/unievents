@@ -2,8 +2,7 @@ import React from 'react'
 import './styles/main.css';
 
 
-
-function AboutUs() {
+const AboutUs = () => {
   return (
     <section id="about" className="about section">
 

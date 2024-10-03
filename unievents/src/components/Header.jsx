@@ -17,7 +17,7 @@ const Header = () => {
             <li><a href="#services">Events</a></li>
             <li><a href="#portfolio">Gallery</a></li>
             <li><Link to="./about-us">About Us</Link></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><Link to="./contact-us">Contact</Link></li>
           </ul>
           <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>

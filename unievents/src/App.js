@@ -11,6 +11,7 @@ import JoinUs from './components/JoinUs';
 import Gallery from './components/Gallery';
 import Faq from './components/Faq';
 import AboutUs from './AboutUs';
+import { ContactUs } from './ContactUs';
 
 function App() {
   useVendorLibraries();
@@ -19,9 +20,8 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        
-        {/* Main Routes */}
         <Routes>
+
           {/* Home Route */}
           <Route path='/' 
             element={
@@ -39,7 +39,14 @@ function App() {
           <Route path='/about-us' 
             element={<AboutUs />}
           />
+
+          {/* Contact Us Route */}
+          <Route path='/contact-us'
+           element={<ContactUs/>}
+           />
+
         </Routes>
+
         <Faq />
         <Footer />
       </div>
