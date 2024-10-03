@@ -13,11 +13,11 @@ const Header = () => {
 
         <nav id="navmenu" className="navmenu">
           <ul>
-            <li><Link to="/" className="active">Home</Link></li>
-            <li><Link to="#services">Events</Link></li>
-            <li><Link to="#portfolio">Gallery</Link></li>
+          <li><Link to="/" className="active">Home</Link></li>
+            <li><a href="#services">Events</a></li>
+            <li><a href="#portfolio">Gallery</a></li>
             <li><Link to="./about-us">About Us</Link></li>
-            <li><Link to="#contact">Contact</Link></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
           <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
