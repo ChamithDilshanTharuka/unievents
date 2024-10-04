@@ -12,6 +12,8 @@ import Gallery from './components/Gallery';
 import Faq from './components/Faq';
 import AboutUs from './AboutUs';
 import { ContactUs } from './ContactUs';
+import CallUs from './components/CallUs';
+import { EventDetails } from './components/EventDetails';
 
 function App() {
   useVendorLibraries();
@@ -30,14 +32,40 @@ function App() {
                 <Events />
                 <Stats />
                 <JoinUs />
-                <Gallery />
               </>
             }
           />
+
+          {/* Events Route */}
+          <Route path='/events'
+           element={
+            <Events/>
+          }
+          />
+
+          {/* Events Details Route */}
+          <Route path='/event-details'
+           element={
+            <EventDetails/>
+          }
+          />
+
+          {/* Events Route */}
+          <Route path='/gallery'
+           element={
+            <Gallery/>
+          }
+          />
+
           
           {/* About Us Route */}
           <Route path='/about-us' 
-            element={<AboutUs />}
+            element={
+              <>
+                <AboutUs />
+                <CallUs/>
+              </>
+            } 
           />
 
           {/* Contact Us Route */}

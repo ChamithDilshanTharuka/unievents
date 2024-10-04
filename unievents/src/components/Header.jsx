@@ -14,8 +14,8 @@ const Header = () => {
         <nav id="navmenu" className="navmenu">
           <ul>
           <li><Link to="/" className="active">Home</Link></li>
-            <li><a href="#services">Events</a></li>
-            <li><a href="#portfolio">Gallery</a></li>
+            <li><a href="./events">Events</a></li>
+            <li><a href="./gallery">Gallery</a></li>
             <li><Link to="./about-us">About Us</Link></li>
             <li><Link to="./contact-us">Contact</Link></li>
           </ul>
