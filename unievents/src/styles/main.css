@@ -1404,8 +1404,15 @@ section,
 .portfolio .portfolio-item .portfolio-info p {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   font-size: 14px;
-  margin-bottom: 0;
+  margin: 0;
   padding-right: 50px;
+}
+.portfolio-info h4{
+  margin-top: 10px;
+}
+
+.portfolio-info input{
+  margin-top: 5px;
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link,
@@ -1965,65 +1972,29 @@ section,
 --------------------------------------------------------------*/
 .service-details .services-list {
   background-color: var(--surface-color);
-  padding: 10px 30px;
+  padding: 10px 10px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.service-details .services-list a {
+.service-details .services-list input {
   display: block;
   line-height: 1;
-  padding: 8px 0 8px 15px;
+  padding: 8px 10px;
   border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
-  margin: 20px 0;
+  margin: 10px 0;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   transition: 0.3s;
+  width: 100%;
 }
 
-.service-details .services-list a.active {
-  color: var(--heading-color);
-  font-weight: 700;
-  border-color: var(--accent-color);
-}
-
-.service-details .services-list a:hover {
-  border-color: var(--accent-color);
-}
-
-.service-details .services-img {
-  margin-bottom: 20px;
-}
-
-.service-details h3 {
-  font-size: 26px;
-  font-weight: 700;
+.service-details .services-list input:hover {
+  background-color: #c3ecf1;
 }
 
 .service-details h4 {
   font-size: 15px;
   font-weight: 700;
-}
-
-.service-details p {
-  font-size: 15px;
-}
-
-.service-details ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.service-details ul li {
-  padding: 5px 0;
-  display: flex;
-  align-items: center;
-}
-
-.service-details ul i {
-  font-size: 20px;
-  margin-right: 8px;
-  color: var(--accent-color);
 }
 
 /*--------------------------------------------------------------

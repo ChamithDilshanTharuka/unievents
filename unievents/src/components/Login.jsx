@@ -27,8 +27,8 @@ export const Login = () => {
                         </div>
                         <br />
 
-                        <Link to="#" className="read-more"><span>Submit</span><i className="bi bi-arrow-right"></i></Link>
-                        <div>
+                        <Link to="/admin-events" className="read-more"><span>Submit</span><i className="bi bi-arrow-right"></i></Link>
+                        <div className='mt-3'>
                             <p>Don't have an account yet? <span className='btn-primary'> <Link to="/signup">Signup Now</Link></span></p>
                         </div>
 

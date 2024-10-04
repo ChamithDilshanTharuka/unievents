@@ -11,11 +11,12 @@ import JoinUs from './components/JoinUs';
 import Gallery from './components/Gallery';
 import Faq from './components/Faq';
 import AboutUs from './AboutUs';
-import { ContactUs } from './ContactUs';
+import { ContactUs } from './components/ContactUs';
 import CallUs from './components/CallUs';
 import { EventDetails } from './components/EventDetails';
-import { Login } from './Login';
-import { Signup } from './Signup';
+import { Login } from './components/Login';
+import { Signup } from './components/Signup';
+import AdminEvents from './components/AdminEvents';
 
 function App() {
   useVendorLibraries();
@@ -46,7 +47,7 @@ function App() {
           }
           />
 
-          {/* Events Details Route */}
+          {/* Event Details Route */}
           <Route path='/event-details'
            element={
             <EventDetails/>
@@ -84,6 +85,11 @@ function App() {
           {/* Signup Route */}
           <Route path='/signup'
            element={<Signup/>}
+           />
+          
+          {/* Admin Events Route */}
+          <Route path='/admin-events'
+           element={<AdminEvents/>}
            />
         </Routes>
 

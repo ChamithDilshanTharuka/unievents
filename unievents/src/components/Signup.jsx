@@ -28,7 +28,7 @@ export const Signup = () => {
 
                 <Link to="./Signup" className="read-more"><span>Submit</span><i className="bi bi-arrow-right"></i></Link>
                 <div className='mt-3'>
-                            <p>Already have an Account? <span className='btn-primary'> <Link to="/signup">Login</Link></span></p>
+                            <p>Already have an Account? <span className='btn-primary'> <Link to="/login">Login</Link></span></p>
                 </div>
             </div>
         </div>
