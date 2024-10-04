@@ -34,6 +34,7 @@ function App() {
                 <Events />
                 <Stats />
                 <JoinUs />
+                <Gallery/>
               </>
             }
           />
