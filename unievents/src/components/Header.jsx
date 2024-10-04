@@ -22,7 +22,7 @@ const Header = () => {
           <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a className="btn-getstarted" href="#about">Get Started</a>
+        <Link to="./login" className="btn-getstarted">Login</Link>
 
       </div>
     </header>

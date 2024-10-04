@@ -14,6 +14,8 @@ import AboutUs from './AboutUs';
 import { ContactUs } from './ContactUs';
 import CallUs from './components/CallUs';
 import { EventDetails } from './components/EventDetails';
+import { Login } from './Login';
+import { Signup } from './Signup';
 
 function App() {
   useVendorLibraries();
@@ -73,6 +75,15 @@ function App() {
            element={<ContactUs/>}
            />
 
+          {/* Login Route */}
+          <Route path='/login'
+           element={<Login/>}
+           />
+
+          {/* Signup Route */}
+          <Route path='/signup'
+           element={<Signup/>}
+           />
         </Routes>
 
         <Faq />

@@ -2000,7 +2000,7 @@ section,
 }
 
 .service-details h4 {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -2027,8 +2027,38 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
+# Extra Changes
 --------------------------------------------------------------*/
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-wrapper i {
+  position: absolute;
+  left: 5px;
+  top: 54%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 1.2em;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding-left: 35px; /* Leave space for the icon */
+  padding-right: 10px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+#input-email,#input-password {
+  display: flex;
+  position: relative;
+}
+
+
 .starter-section {
   /* Add your styles here */
 }
