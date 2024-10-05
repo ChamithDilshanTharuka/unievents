@@ -1,69 +1,79 @@
-import React from 'react'
+import React, { useState} from 'react';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css'; // Import the default Quill styling
+
 
 export const EventDetails = () => {
+
+    const [editorContent, setEditorContent] = useState(''); // State for ReactQuill content
+    const [imageURL, setImageURL] = useState('');
+
     return (
         <>
-            <div class="page-title accent-background">
-                <div class="container">
+            <div className="page-title accent-background">
+                <div className="container">
                     <h1>Event Details</h1>
-                    <nav class="breadcrumbs">
+                    <nav className="breadcrumbs">
                         <ol>
-                            <li><a href="index.html">Home</a></li>
-                            <li class="current">Event Details</li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="#">EventDetails</a></li>
                         </ol>
                     </nav>
                 </div>
             </div>
 
-            <section id="service-details" class="service-details section">
+            <section id="service-details" className="service-details section">
 
-                <div class="container">
+                <div className="container">
 
-                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-                        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-                            <div class="portfolio-item isotope-item filter-app">
-                                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="Event Name" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><span>Preview     </span><i class="bi bi-zoom-in"></i></a>
-                                <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="" />
-                                <div class="portfolio-info">
-                                    <h4>Event Name</h4>
+                    <div className="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+                        <div className="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                            <div className="portfolio-item isotope-item filter-app">
+                            <p>image show up here</p>
+                                <img src={imageURL} className="img-fluid" alt="" />
+                                <div className="portfolio-info services-list">
+
+                                    <h4>Event Name:</h4>
+                                    <p>Enter Event Name</p> 
+                                    <h4>Registration Link</h4>
+                                    <p>Enter Registration Link</p> 
+
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="services-list">
+                        <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                            <div className="services-list">
                                 <h4>Event Name:</h4>
-                                <input type="text" id="ename" placeholder="Enter Event Name" />
+                                <p>Enter Event Name</p>
 
                                 <h4>Event Category</h4>
-                                <input type="text" id="category" placeholder="Enter Event Category" />
+                                <p>Enter Event Category</p>
 
                                 <h4>Start Date and Time</h4>
-                                <input type="datetime-local" id="start-time" />
+                                <p>Start Date</p>
 
                                 <h4>End Date and Time</h4>
-                                <input type="datetime-local" id="end-time" />
+                                <p>End Date</p>
 
                                 <h4>Venue/Location</h4>
-                                <input type="text" id="location" placeholder="Enter Venue/Location" />
+                                <p>Location</p>
 
                                 <h4>Ticket Fee</h4>
-                                <input type="number" id="ticket-fee" placeholder="Enter Ticket Fee" min="0" />
+                                <p>Fee</p> 
 
                                 <h4>Capacity</h4>
-                                <input type="number" id="capacity" placeholder="Enter Capacity" min="0" />
+                                <p>Capacity</p>
 
-                                <h4>Registration Link</h4>
-                                <input type="url" id="reg-link" placeholder="Enter Registration Link" />
                             </div>
 
                         </div>
 
                     </div>
 
-                    <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
+                    <div className="col-lg-12 services-list" data-aos="fade-up" data-aos-delay="200">
                         <h4>Event Description</h4>
-                        <input type="textarea" id="event-data" placeholder="Enter Details" />
+
                     </div>
                 </div>
 
@@ -71,3 +81,4 @@ export const EventDetails = () => {
         </>
     )
 }
+
