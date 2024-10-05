@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -10,44 +11,32 @@ const Footer = () => {
           <a href="index.html" class="logo d-flex align-items-center">
             <span class="sitename">UniEvents</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+          <p>Thank you for visiting our platform dedicated to enhancing university event management across Sri Lanka. Join us in creating a vibrant community where every event is an opportunity for learning, growth, and connection.
+            </p><p> For inquiries, support, or to share your events, feel free to contact us. Together, let’s make university life more enriching!</p>          <div class="social-links d-flex mt-4">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
+        <div class="col-lg-3 col-md-12 footer-links">
+          <h4>Explore</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+          <li><NavLink to="/" exact activeClassName="active">Home</NavLink></li>
+            <li><NavLink to="./events" activeClassName="active">Events</NavLink></li>
+            {/* <li><a href="./gallery">Gallery</a></li> */}
+            <li><NavLink to="./about-us" activeClassName="active">About Us</NavLink></li>
+            <li><NavLink to="./contact-us" activeClassName="active">Contact</NavLink></li>
           </ul>
         </div>
 
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <div class="col-lg-4 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
+          <p>Malabe Road,</p>
+          <p>Kaduwela, Sri Lanka.</p>
+          <p class="mt-2"><strong>Phone:</strong> <span>011-88990099</span></p>
+          <p><strong>Email:</strong> <span>unievents@gmail.com</span></p>
         </div>
 
       </div>
