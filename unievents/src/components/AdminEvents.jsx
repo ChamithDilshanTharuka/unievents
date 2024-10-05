@@ -1,15 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect} from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'; // Import the default Quill styling
+import { useDropzone } from 'react-dropzone';
 
 const AdminEvents = () => {
 
     const [editorContent, setEditorContent] = useState(''); // State for ReactQuill content
+    const [imageURL, setImageURL] = useState('');
 
     // Function to handle editor content change
     const handleEditorChange = (content) => {
         setEditorContent(content);
     };
+
+    // Function to handle file drop
+    const onDrop = useCallback((acceptedFiles) => {
+        // Handle files
+        const file = acceptedFiles[0]; // Since we expect one file at a time
+        if (file) {
+            const url = URL.createObjectURL(file);
+            setImageURL(url);  // Update the image source to display
+        }
+    },);
+
+    // Initialize Dropzone
+    const { getRootProps, getInputProps, isDragActive } = useDropzone({
+        onDrop,
+        accept: 'image/*', // Accept only image files
+    });
+
 
     return (
         <>
@@ -31,13 +50,24 @@ const AdminEvents = () => {
                     <div className="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
                         <div className="col-lg-8" data-aos="fade-up" data-aos-delay="200">
                             <div className="portfolio-item isotope-item filter-app">
-                                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="Event Name" data-gallery="portfolio-gallery-app" className="glightbox preview-link"><span>Preview     </span><i className="bi bi-zoom-in"></i></a>
-                                <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" className="img-fluid" alt="" />
+                                <img src={imageURL} className="img-fluid" alt="" />
                                 <div className="portfolio-info services-list">
+
+                                    {/* React Dropzone Area */}
+                                    <div {...getRootProps()} className="dropzone-area" style={dropzoneStyle}>
+                                        <input {...getInputProps()} />
+                                        {isDragActive ? (
+                                            <p>Drop the files here...</p>
+                                        ) : (
+                                            <p>Drag 'n' drop an image here, or click to select one</p>
+                                        )}
+                                    </div>
+
                                     <h4>Event Name:</h4>
                                     <input type="text" id="ename" placeholder="Enter Event Name" />
                                     <h4>Registration Link</h4>
                                     <input type="url" id="reg-link" placeholder="Enter Registration Link" />
+
                                 </div>
                             </div>
                         </div>
@@ -73,7 +103,7 @@ const AdminEvents = () => {
 
                     <div className="col-lg-12 services-list" data-aos="fade-up" data-aos-delay="200">
                         <h4>Event Description</h4>
-                        
+
                         {/* ReactQuill Editor */}
                         <ReactQuill
                             theme="snow"
@@ -98,6 +128,12 @@ const AdminEvents = () => {
         </>
     )
 }
-
+const dropzoneStyle = {
+    border: '2px dashed #007bff',
+    borderRadius: '5px',
+    padding: '20px',
+    textAlign: 'center',
+    cursor: 'pointer'
+};
 
 export default AdminEvents;
