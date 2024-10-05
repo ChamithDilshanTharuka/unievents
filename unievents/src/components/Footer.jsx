@@ -35,7 +35,7 @@ const Footer = () => {
           <h4>Contact Us</h4>
           <p>Malabe Road,</p>
           <p>Kaduwela, Sri Lanka.</p>
-          <p class="mt-2"><strong>Phone:</strong> <span>011-88990099</span></p>
+          <p class="mt-3"><strong>Phone:</strong> <span>011-88990099</span></p>
           <p><strong>Email:</strong> <span>unievents@gmail.com</span></p>
         </div>
 
