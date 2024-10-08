@@ -14,19 +14,19 @@ const JoinUs = () => {
                     <div className="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
                         <h3>Join Us</h3>
                         <p className="fst-italic">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua.
+                            Collaborating and sharing ideas is essential for growth and innovation. By joining our community, you will have the opportunity to connect with like-minded individuals, gain new insights, and contribute to a vibrant network of university students. 
+                            <p>Don’t miss the chance to enhance your skills and expand your horizons!</p>
                         </p>
                         <ul>
-                            <li><i className="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                            <li><i className="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-                            <li><i className="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+                            <li><i className="bi bi-check2-all"></i> <span>Participate in events and notify others to spread awareness.</span></li>
+                            <li><i className="bi bi-check2-all"></i> <span>Collaborate with peers to develop projects and share ideas.</span></li>
+                            <li><i className="bi bi-check2-all"></i> <span>Create new events and boost your events across the community.</span></li>
                         </ul>
                         <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                            By becoming part of our platform, you will unlock numerous opportunities to network, learn, and grow within the university community. Engage with diverse events that cater to various passions and interests, making your university experience more enriching and enjoyable.
                         </p>
                     </div>
+
                 </div>
 
             </div>

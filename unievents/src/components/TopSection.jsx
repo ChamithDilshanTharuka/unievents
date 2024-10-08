@@ -11,7 +11,7 @@ const TopSection = () => {
         <div className="row justify-content-center" data-aos="zoom-out">
           <div className="col-xl-7 col-lg-9 text-center">
             <h1>UniEvents</h1>
-            <p>We are team of talented designers making websites with Bootstrap</p>
+            <p>Welcome to Our Centralized University Event Management Platform</p>
           </div>
         </div>
 

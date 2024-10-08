@@ -7,7 +7,7 @@ const Events = () => {
             <section id="services" className="services section light-background">
                 <div className="container section-title" data-aos="fade-up">
                     <h2>Events</h2>
-                    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                    <p>Explore Exciting Events Happening Across Our University Network And Discover New Opportunities</p>
                 </div>
 
                 <div className="container">

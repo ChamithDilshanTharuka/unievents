@@ -5,7 +5,7 @@ const Gallery = () => {
     <section id="portfolio" class="portfolio section">
     <div class="container section-title" data-aos="fade-up">
       <h2>Gallery</h2>
-      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      <p>Discover vibrant moments from our events and see the energy of our university community come alive!</p>
     </div>
     <div class="container">
 

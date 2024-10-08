@@ -10,7 +10,7 @@ import Stats from './components/Stats';
 import JoinUs from './components/JoinUs';
 import Gallery from './components/Gallery';
 import Faq from './components/Faq';
-import AboutUs from './AboutUs';
+import AboutUs from './components/AboutUs';
 import { ContactUs } from './components/ContactUs';
 import CallUs from './components/CallUs';
 import { EventDetails } from './components/EventDetails';
