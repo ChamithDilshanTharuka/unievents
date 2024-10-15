@@ -1,0 +1,10 @@
+-- CREATE DATABASE unievents;
+
+use unievents;
+
+CREATE TABLE users(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(225) UNIQUE NOT NULL,
+    password VARCHAR(225) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
