@@ -7,18 +7,18 @@ export const Login = () => {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
-    const handleSubmit = async(e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault(); // Prevent page reload
 
         //Basic input validation
-        if(!email || !password) {
+        if (!email || !password) {
             alert('Please fill in all fields');
             return;
         }
 
-        try{
-             // Send login request to backend
-            const response = await axios.post('http://localhost:5000/api/login', { email, password});
+        try {
+            // Send login request to backend
+            const response = await axios.post('http://localhost:5000/api/login', { email, password });
 
             if (response.data.token) {
                 //Store JWT token in localStorage
@@ -28,12 +28,12 @@ export const Login = () => {
             } else {
                 alert('Invalid email or password');
             }
-        } catch(error){
-                    console.error('Login failed:', error);
-                    alert('An error occured during login, Please try again.');
-            }
-        };
-    
+        } catch (error) {
+            console.error('Login failed:', error);
+            alert('An error occured during login, Please try again.');
+        }
+    };
+
 
 
 
