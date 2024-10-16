@@ -7,6 +7,34 @@ export const Login = () => {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
+    const handleSubmit = async(e) => {
+        e.preventDefault(); // Prevent page reload
+
+        //Basic input validation
+        if(!email || !password) {
+            alert('Please fill in all fields');
+            return;
+        }
+
+        try{
+             // Send login request to backend
+            const response = await axios.post('http://localhost:5000/api/login', { email, password});
+
+            if (response.data.token) {
+                //Store JWT token in localStorage
+                localStorage.setItem('authToken', response.data.token);
+                alert('Login successful!');
+                navigate('/admin-events'); // Redirect to events page
+            } else {
+                alert('Invalid email or password');
+            }
+        } catch(error){
+                    console.error('Login failed:', error);
+                    alert('An error occured during login, Please try again.');
+            }
+        };
+    
+
 
 
     return (
@@ -41,15 +69,15 @@ export const Login = () => {
                             </div>
                             <br />
 
-                            <Link to="/admin-events" className="read-more">
+                            <button type="submit" className="read-more">
                                 <span>Submit</span>
                                 <i className="bi bi-arrow-right"></i>
-                            </Link>
+                            </button>
 
                         </form>
 
                         <div className='mt-3'>
-                            <p>Don't have an account yet?
+                            <p>Don't have an account yet?{'  '}
                                 <span className='btn-primary'>
                                     <Link to="/signup">Signup Now</Link>
                                 </span>
