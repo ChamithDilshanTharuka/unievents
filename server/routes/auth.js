@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bycrptjs');
+const bcrypt = require('bcryptjs');
 const db = require('../config/db');
 
 //Signup Route
@@ -12,11 +12,12 @@ router.post('/signup', async (req, res) => {
     try {
         // Hash the password
         const hashedPassword = await bcrypt.hash(password, 10);
+        console.log('Hashed Password:', hashedPassword);
+
         const query = 'INSERT INTO users (email, password) VALUES (?, ?)';
         // Save the user to the database
         db.query(query, [email, hashedPassword], (err, result) => {
             if (err) return res.status(500).json({ message: 'Signup failed' });
-
             res.status(201).json({ message: 'User registed successfully' });
         });
     }

@@ -15,7 +15,7 @@ export const Signup = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/signup', { email, password });
+      const response = await axios.post('http://localhost:3001/api/signup', { email, password });
 
       if (response.status === 201) {
         alert('Signup successful! Please log in.');

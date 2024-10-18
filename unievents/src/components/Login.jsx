@@ -18,7 +18,7 @@ export const Login = () => {
 
         try {
             // Send login request to backend
-            const response = await axios.post('http://localhost:5000/api/login', { email, password });
+            const response = await axios.post('http://localhost:3001/routes/auth', { email, password });
 
             if (response.data.token) {
                 //Store JWT token in localStorage
