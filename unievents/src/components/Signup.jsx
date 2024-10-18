@@ -8,6 +8,7 @@ export const Signup = () => {
   const navigate = useNavigate();
 
   const handleSignup = async (e) => {
+    e.preventDefault(); // Prevent page reload
 
     if (!email || !password) {
       alert("Please fill in all fields");
@@ -15,7 +16,7 @@ export const Signup = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:3001/api/signup', { email, password });
+      const response = await axios.post('http://localhost:3001/api/auth/signup', { email, password });
 
       if (response.status === 201) {
         alert('Signup successful! Please log in.');
@@ -39,6 +40,7 @@ export const Signup = () => {
         <div className="container">
           <div className="content" data-aos="fade-up" data-aos-delay="100">
             <form onSubmit={handleSignup}>
+
               <label id='input-email'>Email</label>
               <div className='input-wrapper'>
                 <i className="bi bi-envelope"></i>
@@ -69,6 +71,7 @@ export const Signup = () => {
                 <span>Submit</span>
                 <i className="bi bi-arrow-right"></i>
               </button>
+              
             </form>
 
             <div className='mt-3'>
@@ -82,5 +85,5 @@ export const Signup = () => {
         </div>
       </div>
     </section>
-  )
+  );
 }

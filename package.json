@@ -4,6 +4,6 @@
   },
 
   "scripts": {
-    "start": "concurrently \"cd server && nodemon index.js\" \"cd unievents && npm start"
+    "start": "concurrently \"cd server && nodemon server.js\" \"cd unievents && npm start"
   }
 }
