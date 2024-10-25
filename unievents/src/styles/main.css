@@ -2033,3 +2033,18 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*event page*/
+
+.event-img {
+  width: 100%; /* Full width of the container */
+  height: 400px; /* Adjust height to create the vertical rectangular box */
+  position: relative; /* To handle the image position */
+}
+
+.event-img img {
+  width: 100%;  /* Make the image fill the container's width */
+  height: 100%; /* Make the image fill the container's height */
+
+  object-position: center; /* Center the image within the box */
+}
