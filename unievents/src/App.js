@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/main.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ProtectedRoute from './components/ProtectedRoute';
 import useVendorLibraries from './hooks/useVendorLibraries';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -20,7 +21,7 @@ import AdminEvents from './components/AdminEvents';
 
 function App() {
   useVendorLibraries();
-  
+
   return (
     <Router>
       <div className="App">
@@ -28,69 +29,73 @@ function App() {
         <Routes>
 
           {/* Home Route */}
-          <Route path='/' 
+          <Route path='/'
             element={
               <>
                 <TopSection />
                 <Events />
                 <Stats />
                 <JoinUs />
-                <Gallery/>
+                <Gallery />
               </>
             }
           />
 
           {/* Events Route */}
           <Route path='/events'
-           element={
-            <Events/>
-          }
+            element={
+              <Events />
+            }
           />
 
           {/* Event Details Route */}
           <Route path='/event-details'
-           element={
-            <EventDetails/>
-          }
+            element={
+              <EventDetails />
+            }
           />
 
           {/* Events Route */}
           <Route path='/gallery'
-           element={
-            <Gallery/>
-          }
+            element={
+              <Gallery />
+            }
           />
 
-          
+
           {/* About Us Route */}
-          <Route path='/about-us' 
+          <Route path='/about-us'
             element={
               <>
                 <AboutUs />
-                <CallUs/>
+                <CallUs />
               </>
-            } 
+            }
           />
 
           {/* Contact Us Route */}
           <Route path='/contact-us'
-           element={<ContactUs/>}
-           />
+            element={<ContactUs />}
+          />
 
           {/* Login Route */}
           <Route path='/login'
-           element={<Login/>}
-           />
+            element={<Login />}
+          />
 
           {/* Signup Route */}
           <Route path='/signup'
-           element={<Signup/>}
-           />
-          
+            element={<Signup />}
+          />
+
           {/* Admin Events Route */}
           <Route path='/admin-events'
-           element={<AdminEvents/>}
-           />
+            element={
+              <ProtectedRoute>
+                <AdminEvents />
+              </ProtectedRoute>}
+
+          />
         </Routes>
 
         <Faq />
