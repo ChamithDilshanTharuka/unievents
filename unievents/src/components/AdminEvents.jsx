@@ -2,11 +2,43 @@ import React, { useState, useCallback, useEffect} from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'; // Import the default Quill styling
 import { useDropzone } from 'react-dropzone';
+import axios from 'axios';
 
 const AdminEvents = () => {
 
     const [editorContent, setEditorContent] = useState(''); // State for ReactQuill content
     const [imageURL, setImageURL] = useState('');
+    const[eventData, setEventData] = useState({
+        name:'',
+        category: '',
+        startTime: '',
+        endTime: '',
+        location: '',
+        fee: 0,
+        capacity: 0,
+        registrationLink: '',
+        description: '',
+        imageURL: '',
+    });
+
+    const handleInputChange = (e) => {
+        setEventData({
+            ...eventData,
+            [e.target.id]: e.target.value,
+        });
+    };
+
+    const handleSaveEvent = async () => {
+        try {
+            const response = await axios.post('/components/events', eventData);
+            if (response.status === 201) {
+                alert('Event created successfully');
+            }
+        }
+        catch (error) {
+            console.error('Error saving event', error);
+        }
+    };
 
     // Function to handle editor content change
     const handleEditorChange = (content) => {
@@ -21,7 +53,7 @@ const AdminEvents = () => {
             const url = URL.createObjectURL(file);
             setImageURL(url);  // Update the image source to display
         }
-    },);
+    },[]);
 
     // Initialize Dropzone
     const { getRootProps, getInputProps, isDragActive } = useDropzone({
@@ -54,19 +86,20 @@ const AdminEvents = () => {
                                 <div className="portfolio-info services-list">
 
                                     {/* React Dropzone Area */}
-                                    <div {...getRootProps()} className="dropzone-area" style={dropzoneStyle}>
+                                    <div className="dropzone-area" {...getRootProps()}  style={dropzoneStyle}>
                                         <input {...getInputProps()} />
                                         {isDragActive ? (
                                             <p>Drop the files here...</p>
                                         ) : (
                                             <p>Drag 'n' drop an image here, or click to select one</p>
                                         )}
+                                         {imageURL && <img src={imageURL} alt="Uploaded preview" style={{ width: '100%', marginTop: '10px' }} />}
                                     </div>
 
                                     <h4>Event Name:</h4>
-                                    <input type="text" id="ename" placeholder="Enter Event Name" />
+                                    <input type="text" id="name" value={eventData.name} onChange={handleInputChange} placeholder="Enter Event Name" />
                                     <h4>Registration Link</h4>
-                                    <input type="url" id="reg-link" placeholder="Enter Registration Link" />
+                                    <input type="url" id="registrationLink" value={eventData.registrationLink} onChange={handleInputChange} placeholder="Enter Registration Link" />
 
                                 </div>
                             </div>
@@ -75,25 +108,25 @@ const AdminEvents = () => {
                         <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                             <div className="services-list">
                                 <h4>Event Name:</h4>
-                                <input type="text" id="ename" placeholder="Enter Event Name" />
+                                <input type="text" id="ename" value={eventData.name} onChange={handleInputChange} placeholder="Enter Event Name" />
 
                                 <h4>Event Category</h4>
-                                <input type="text" id="category" placeholder="Enter Event Category" />
+                                <input type="text" id="category" value={eventData.category} onChange={handleInputChange} placeholder="Enter Event Category" />
 
                                 <h4>Start Date and Time</h4>
-                                <input type="datetime-local" id="start-time" />
+                                <input type="datetime-local" id="start-time" value={eventData.startTime} onChange={handleInputChange}/>
 
                                 <h4>End Date and Time</h4>
-                                <input type="datetime-local" id="end-time" />
+                                <input type="datetime-local" id="end-time" value={eventData.endTime} onChange={handleInputChange} />
 
                                 <h4>Venue/Location</h4>
-                                <input type="text" id="location" placeholder="Enter Venue/Location" />
+                                <input type="text" id="location" value={eventData.location} onChange={handleInputChange} placeholder="Enter Venue/Location" />
 
                                 <h4>Ticket Fee</h4>
-                                <input type="number" id="ticket-fee" placeholder="Enter Ticket Fee" min="0" />
+                                <input type="number" id="ticket-fee" value={eventData.fee} onChange={handleInputChange} placeholder="Enter Ticket Fee" min="0" />
 
                                 <h4>Capacity</h4>
-                                <input type="number" id="capacity" placeholder="Enter Capacity" min="0" />
+                                <input type="number" id="capacity" value={eventData.capacity} onChange={handleInputChange} placeholder="Enter Capacity" min="0" />
 
                             </div>
 
