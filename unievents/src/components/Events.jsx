@@ -17,7 +17,7 @@ const Events = () => {
                         <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                             <div className="service-item item-cyan position-relative">
                                 <div className='event-img'>
-                                    <img src="/assets/img/1.png" alt="img" />
+                                    <img src="/assets/img/event1.png" alt="img" />
                                 </div>
                                 <Link to="/event-details" className="stretched-link">
                                     <h3>Event Name</h3>
@@ -28,7 +28,7 @@ const Events = () => {
                         <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                             <div className="service-item item-cyan position-relative">
                                 <div className='event-img'>
-                                    <img src="/assets/img/1.png" alt="img" />
+                                    <img src="/assets/img/event2.jpeg" alt="img" />
                                 </div>
                                 <Link to="/event-details" className="stretched-link">
                                     <h3>Event Name</h3>
@@ -39,7 +39,7 @@ const Events = () => {
                         <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                             <div className="service-item item-cyan position-relative">
                                 <div className='event-img'>
-                                    <img src="/assets/img/1.png" alt="img" />
+                                    <img src="/assets/img/event3.jpg" alt="img" />
                                 </div>
                                 <Link to="/event-details" className="stretched-link">
                                     <h3>Event Name</h3>
